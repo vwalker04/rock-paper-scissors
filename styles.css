@@ -1,0 +1,11 @@
+body {
+  background: #ACB2AD;
+}
+.ask {
+  font-family: 'Hammersmith One', sans-serif;
+  font-size: 30px;
+  margin-top: 50px;
+}
+.selections {
+  max-width: 400px;
+}
