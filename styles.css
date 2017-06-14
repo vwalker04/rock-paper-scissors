@@ -2,9 +2,11 @@ body {
   background: #ACB2AD;
 }
 .ask {
+  color: white;
   font-family: 'Hammersmith One', sans-serif;
-  font-size: 30px;
+  font-size: 28px;
   margin-top: 50px;
+  transition: 5s;
 }
 .selections {
   max-width: 400px;

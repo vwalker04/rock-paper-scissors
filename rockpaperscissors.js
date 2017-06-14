@@ -1,11 +1,23 @@
-// This generates the computer's choice.
+// This generates the computer's choice and the cheesy sound that plays.
 var computerChoice = Math.random();
   if (computerChoice < .34) {
     computerChoice = "Rock";
+    function play() {
+      var audio = document.getElementById("hadouken");
+      audio.play();
+     }
   } else if (computerChoice > .67) {
     computerChoice = "Paper";
+    function play() {
+      var audio = document.getElementById("tiger");
+      audio.play();
+     }
   } else {
     computerChoice = "Scissors";
+    function play() {
+      var audio = document.getElementById("hurricane");
+      audio.play();
+     }
   }
 
 // I replaced an If / Else statement with a Switch
