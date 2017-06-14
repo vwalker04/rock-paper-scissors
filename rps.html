@@ -11,26 +11,31 @@
 
   <title>Rock, Paper or Scissors</title>
 </head>
-<body>
+<body onload="loadQuestion">
   <div class="container">
 
     <p class="ask">Make your selection:</p>
 
     <div class="row selections">
       <div class="col-xs-4">
-        <input type="button" class="btn btn-warning" value="Rock" id="rock" onClick="choiceRock(), location.reload()">
+        <input type="button" class="btn btn-warning" value="Rock" id="rock" onClick="play(), choiceRock(), location.reload()">
       </div>
       <div class="col-xs-4">
-        <input type="button" class="btn btn-default" value="Paper" id="paper" onClick="choicePaper(), location.reload()">
+        <input type="button" class="btn btn-default" value="Paper" id="paper" onClick="play(), choicePaper(), location.reload()">
       </div>
       <div class="col-xs-4">
-        <input type="button" class="btn btn-info" value="Scissors" id="scissors" onClick="choiceScissors(), location.reload()">
+        <input type="button" class="btn btn-info" value="Scissors" id="scissors" onClick="play(), choiceScissors(), location.reload()">
       </div>
     </div>
 
     <p id="text"></p>
+
+    <audio id="hadouken" src="http://soundfxcenter.com/video-games/street-fighter/8d82b5_Street_Fighter_Hadouken_Sound_Effect.mp3"></audio>
+    <audio id="tiger" src="http://soundfxcenter.com/video-games/street-fighter/8d82b5_Sagat_Tiger_Sound_Effect.mp3"></audio>
+    <audio id="hurricane" src="http://soundfxcenter.com/video-games/street-fighter/8d82b5_Street_Fighter_Tatsumaki_Senpuu_Kyaku_Sound_Effect.mp3"></audio>
   </div>
   <script src="rockpaperscissors.js" type="text/javascript">
+
   </script>
 </body>
 </html>
