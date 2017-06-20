@@ -5,20 +5,21 @@ var computerChoice = Math.random();
     function play() {
       var audio = document.getElementById("hadouken");
       audio.play();
-     }
+    }
   } else if (computerChoice > .67) {
     computerChoice = "Paper";
     function play() {
       var audio = document.getElementById("tiger");
       audio.play();
-     }
+    }
   } else {
     computerChoice = "Scissors";
     function play() {
       var audio = document.getElementById("hurricane");
       audio.play();
-     }
+    }
   }
+
 
 // I replaced an If / Else statement with a Switch
 // statement to replicate desired results for practice.
@@ -65,6 +66,13 @@ function choiceScissors() {
   }
 }
 
+$(document).ready(function () {
+
+  $('.btn').hover(function () {
+    $(this).fadeOut(100).fadeIn('fast').fadeOut(100).fadeIn('fast').fadeOut(100).fadeIn('fast');
+  });
+
+});
 // Was displaying user choice in HTML body but after
 // adding reload() method the text was void.
 
