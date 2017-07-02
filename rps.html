@@ -20,17 +20,19 @@
 
     <div class="row selections">
       <div class="col-xs-4">
-        <input type="button" class="btn btn-warning" value="Rock" id="rock" onClick="play(), choiceRock(), location.reload()">
+        <input type="button" class="btn btn-warning" value="Rock" id="rock" onClick="play(), choiceRock()">
       </div>
       <div class="col-xs-4">
-        <input type="button" class="btn btn-default" value="Paper" id="paper" onClick="play(), choicePaper(), location.reload()">
+        <input type="button" class="btn btn-default" value="Paper" id="paper" onClick="play(), choicePaper()">
       </div>
       <div class="col-xs-4">
-        <input type="button" class="btn btn-info" value="Scissors" id="scissors" onClick="play(), choiceScissors(), location.reload()">
+        <input type="button" class="btn btn-info" value="Scissors" id="scissors" onClick="play(), choiceScissors()">
       </div>
     </div>
 
-    <p id="text"></p>
+    <div>
+      <h1 id="text"></h1>
+    </div>
 
     <audio id="hadouken" src="http://soundfxcenter.com/video-games/street-fighter/8d82b5_Street_Fighter_Hadouken_Sound_Effect.mp3"></audio>
     <audio id="tiger" src="http://soundfxcenter.com/video-games/street-fighter/8d82b5_Sagat_Tiger_Sound_Effect.mp3"></audio>

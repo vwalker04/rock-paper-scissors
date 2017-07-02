@@ -1,87 +1,1 @@
-// This generates the computer's choice and the cheesy sound that plays.
-var computerChoice = Math.random();
-  if (computerChoice < .34) {
-    computerChoice = "Rock";
-    function play() {
-      var audio = document.getElementById("hadouken");
-      audio.play();
-    }
-  } else if (computerChoice > .67) {
-    computerChoice = "Paper";
-    function play() {
-      var audio = document.getElementById("tiger");
-      audio.play();
-    }
-  } else {
-    computerChoice = "Scissors";
-    function play() {
-      var audio = document.getElementById("hurricane");
-      audio.play();
-    }
-  }
-
-
-// I replaced an If / Else statement with a Switch
-// statement to replicate desired results for practice.
-function choiceRock() {
-  switch (computerChoice) {
-    case "Rock":
-      alert("Tie! 2 Rocks. Starting a fire?");
-      break;
-    case "Paper":
-      alert("You just lost to Paper... *Sigh*");
-      break;
-    case "Scissors":
-      alert("Winner! Winner! Chicken dinner!");
-      break;
-  }
-}
-// function choiceRock() {
-//   if (computerChoice === "Rock") {
-//     alert("Tie!");
-//   } else if (computerChoice === "Paper") {
-//     alert("You lost to " + computerChoice + "!");
-//   } else {
-//     alert("You bashed the heck out of " + computerChoice + "!");
-//   }
-// }
-
-function choicePaper() {
-  if (computerChoice === "Paper") {
-    alert("Tie! Making a book with all this paper.");
-  } else if (computerChoice === "Scissors") {
-    alert("Oh snip! You lost to " + computerChoice + "!");
-  } else {
-    alert("You smothered " + computerChoice + "!");
-  }
-}
-
-function choiceScissors() {
-  if (computerChoice === "Scissors") {
-    alert("Tie! Edward Scirssor-Hands, much?");
-  } else if (computerChoice === "Rock") {
-    alert("Sorry. " + computerChoice + " busted you up.");
-  } else {
-    alert("You shredded " + computerChoice + "!");
-  }
-}
-
-$(document).ready(function () {
-
-  $('.btn').hover(function () {
-    $(this).fadeOut(100).fadeIn('fast').fadeOut(100).fadeIn('fast').fadeOut(100).fadeIn('fast');
-  });
-
-});
-// Was displaying user choice in HTML body but after
-// adding reload() method the text was void.
-
-// function decisionRock() {
-//   document.getElementById('text').innerHTML="Rock!";
-// };
-// function decisionPaper() {
-//   document.getElementById('text').innerHTML="Paper!";
-// };
-// function decisionScissors() {
-//   document.getElementById('text').innerHTML="Scissors!";
-// };
+// This generates the computer's choice and the cheesy sound that plays.var randomNumb = Math.random();  if (randomNumb < .34) {    computerChoice = "Rock";    function play() {      var audio = document.getElementById("hadouken");      audio.play();    }  } else if (randomNumb > .67) {    computerChoice = "Paper";    function play() {      var audio = document.getElementById("tiger");      audio.play();    }  } else {    computerChoice = "Scissors";    function play() {      var audio = document.getElementById("hurricane");      audio.play();    }  }// Chose a switch statement for practice on this functionfunction choiceRock() {  switch (computerChoice) {    case "Rock":      document.getElementById('text').innerHTML="Tie! 2 Rocks. Starting a fire?";      break;    case "Paper":      document.getElementById('text').innerHTML="You just lost to a piece of paper...";      break;    case "Scissors":      document.getElementById('text').innerHTML="Winner! Winner! Chicken dinner!";      break;  }// Reloads page for new results    setTimeout (function() {    location.reload();  }, 1500);// jquery fade effects on #text  $('#text').show().fadeOut(1499);}function choicePaper() {  if (computerChoice === "Paper") {    document.getElementById('text').innerHTML="Tie! Making a book with all this paper.";  } else if (computerChoice === "Scissors") {    document.getElementById('text').innerHTML="Oh snip! You lost to " + computerChoice + "!";  } else {    document.getElementById('text').innerHTML="You smothered " + computerChoice + "!";  }// Reloads page for new results    setTimeout (function() {    location.reload();  }, 1500);// jquery fade effects on #text  $('#text').show().fadeOut(1499);}function choiceScissors() {  if (computerChoice === "Scissors") {    document.getElementById('text').innerHTML="Tie! Edward Scissor-Hands, much?";  } else if (computerChoice === "Rock") {    document.getElementById('text').innerHTML="Sorry. " + computerChoice + " busted you up.";  } else {    document.getElementById('text').innerHTML="You shredded " + computerChoice + "!";  }// Reloads page for new results    setTimeout (function() {    location.reload();  }, 1500);// jquery fade effects on #text  $('#text').show().fadeOut(1499);}$(document).ready(function () {  $('.btn').hover(function () {    $(this).fadeOut(100).fadeIn('fast').fadeOut(100).fadeIn('fast').fadeOut(100).fadeIn('fast');  });});
